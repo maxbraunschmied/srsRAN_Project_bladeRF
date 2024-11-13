@@ -34,7 +34,8 @@ static bool validate_clock_sources(const radio_configuration::clock_sources& sou
       radio_configuration::clock_sources::source::DEFAULT,
       radio_configuration::clock_sources::source::INTERNAL,
       radio_configuration::clock_sources::source::EXTERNAL,
-      radio_configuration::clock_sources::source::GPSDO};
+      radio_configuration::clock_sources::source::GPSDO,
+      radio_configuration::clock_sources::source::REF_IN};
 
   if (valid_clock_sources.count(sources.clock) == 0) {
     fmt::print("Invalid clock source.\n");

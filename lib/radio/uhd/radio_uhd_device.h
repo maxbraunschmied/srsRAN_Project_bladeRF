@@ -255,6 +255,9 @@ public:
       case radio_configuration::clock_sources::source::GPSDO:
         clock_src = "gpsdo";
         break;
+      case radio_configuration::clock_sources::source::REF_IN:
+        sync_src = "ref_in";
+        break;
     }
 
     // Convert sync source to string.
