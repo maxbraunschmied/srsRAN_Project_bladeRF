@@ -143,7 +143,7 @@ inline clock_sources::source to_clock_source(const std::string& str)
   if (str == "internal") {
     return clock_sources::source::INTERNAL;
   }
-  if (str == "external") {
+  if (str == "external" || str == "ref_in") {
     return clock_sources::source::EXTERNAL;
   }
   if (str == "gpsdo") {
