@@ -273,6 +273,9 @@ public:
       case radio_configuration::clock_sources::source::GPSDO:
         sync_src = "gpsdo";
         break;
+      case radio_configuration::clock_sources::source::REF_IN:
+        sync_src = "ref_in";
+        break;
     }
 
     logger.debug("Setting PPS source to '{}' and clock source to '{}'.", sync_src, clock_src);
