@@ -256,7 +256,7 @@ public:
         clock_src = "gpsdo";
         break;
       case radio_configuration::clock_sources::source::REF_IN:
-        sync_src = "ref_in";
+        clock_src = "ref_in";
         break;
     }
 
