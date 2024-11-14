@@ -280,8 +280,7 @@ radio_session_uhd_impl::radio_session_uhd_impl(const radio_configuration::radio&
 
   // Wait until external reference / GPS is locked.
   if (radio_config.clock.clock == radio_configuration::clock_sources::source::GPSDO ||
-      radio_config.clock.clock == radio_configuration::clock_sources::source::EXTERNAL ||
-      radio_config.clock.clock == radio_configuration::clock_sources::source::REF_IN) {
+      radio_config.clock.clock == radio_configuration::clock_sources::source::EXTERNAL) {
     // It blocks until clock source is locked.
     if (!wait_sensor_locked("ref_locked", true, CLOCK_TIMEOUT_MS)) {
       fmt::print("Could not lock reference clock source.\n");
